@@ -45,3 +45,19 @@ var ns6=document.getElementById&&!document.all
 var opera=browserinfos.match(/Opera/)  
 var browserok=ie5||ns6||opera
 
+
+function randommaker(range) {		
+	rand=Math.floor(range*Math.random())
+    return rand
+}
+
+function initsnow() {
+	if (ie5 || opera) {
+		marginbottom = document.body.clientHeight
+		marginright = document.body.clientWidth
+	}
+	else if (ns6) {
+		marginbottom = window.innerHeight
+		marginright = window.innerWidth
+	}
+	
