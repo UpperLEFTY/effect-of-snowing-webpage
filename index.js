@@ -1,4 +1,4 @@
-</script><script>
+<script>
 // Set the number of snowflakes (more than 30 - 40 not recommended)
 var snowmax=35
 
