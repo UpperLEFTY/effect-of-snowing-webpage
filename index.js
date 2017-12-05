@@ -93,4 +93,19 @@ function movesnow() {
 		
 		if (snow[i].posy>=marginbottom-2*snow[i].size || parseInt(snow[i].style.left)>(marginright-3*lftrght[i])){
 			if (snowingzone==1) {snow[i].posx=randommaker(marginright-snow[i].size)}
-			
+			if (snowingzone==2) {snow[i].posx=randommaker(marginright/2-snow[i].size)}
+			if (snowingzone==3) {snow[i].posx=randommaker(marginright/2-snow[i].size)+marginright/4}
+			if (snowingzone==4) {snow[i].posx=randommaker(marginright/2-snow[i].size)+marginright/2}
+			snow[i].posy=0
+		}
+	}
+	var timer=setTimeout("movesnow()",50)
+}
+
+for (i=0;i<=snowmax;i++) {
+	document.write("<span id='s"+i+"' style='position:absolute;top:-"+snowmaxsize+"'>"+snowletter+"</span>")
+}
+if (browserok) {
+	window.onload=initsnow
+}
+</script>
